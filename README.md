@@ -4,7 +4,7 @@ Implementation of a robot able to accept basic movement commands.
 
 ## Environments
 
-The application has been implemented using PYHTON 3.5.1 and tested on Windows 10. Only basic Python libraries has been used.
+The application has been implemented using PYHTON 3.5.1 and tested on Windows 10. Only basic Python libraries have been used.
 
 The code will not run on PYTHON 2.x
 
@@ -20,7 +20,7 @@ Once started the following commands can be used:
 - PLACE x,y,facedirection
 Places the robot on the grid with the given parameters.
 
-x and y has to be integer values from 0 to 4
+x and y have to be integer values from 0 to 4
 facedirection has to be one of the following strings: "NORTH" "EAST" "SOUTH" "WEST"
 
 This is the first command that has to be given to the robot. If not placed correctly the robot will ignore
