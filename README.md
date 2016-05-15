@@ -27,15 +27,15 @@ This is the first command that has to be given to the robot. If not placed corre
 all commands
 
 
-- LEFT	:	The robot will turn 90° left
+- LEFT : The robot will turn 90° left
 
-- RIGHT	:	The robot will turn 90° right
+- RIGHT : The robot will turn 90° right
 
-- MOVE	:	The robot will move one square in the facing direction. If the robot would fall of the  the table the command is ignored
+- MOVE : The robot will move one square in the facing direction. If the robot would fall of the  the table the command is ignored
 
-- REPORT	:	Will report the x,y and the direction the robot is facing
+- REPORT : Will report the x,y and the direction the robot is facing
 
-- EXIT	:	Exits the program
+- EXIT : Exits the program
 
 
 ## Testing Instructions
