@@ -14,6 +14,10 @@ The code will not run on PYTHON 2.x
 
 The program is launched using: "python robot.py" an additional parameter "-v" can be used to activate verbose mode
 which will give a response after every command.
+The user can also choose to save the commands in a file and give the filename as parameter.
+
+
+usage: robot.py [-h] [-v] [filename]
 
 Once started the following commands can be used:
 
@@ -46,7 +50,8 @@ use:
 
 
 ####simple_robot_test:
--	Test Different values for place command
+-	Test different values for place command
+-	Test different values for place command
 -	Test if report returns the right value
 -	Test turn functions
 -	Test movement in every direction
@@ -56,7 +61,7 @@ use:
 ####command handler test
 -	Test return string for every command whitout verbose mode : Only PLACE should give a return value
 -	Test return string for every command with verbose mode
--	Test return string for invalid place commands
+-	Test return string for invalid place 
 -	Test return string for different PLACE commands
 -	Test return string for commands with placed robot
 -	Test return string for movement commands that would make the robot fall off the table
@@ -91,21 +96,17 @@ Checks commands for errors and passes them to the robot
 Actual robot logic, implemented as a simple state machine. All the inputs and outputs of the functions are integer values
 
 
-The main program reads the input from the console and passes it to the roboController usig the execCommand() function.
-The controller checks if there are any errors in the command or the parameters and if everything is alright it passes
-the command to the simple_robot calling the associated function.
-The simple_robot will then try to execute the command, if an error happens the function will return an error, the robo_controller
-is then again responsable to interpret the error and if verbose mode is chosen return an error message. The main
-program will then print the response on the console.
-
-
-## Discussion
-
 While implementing the this project i was imagining a little toy robot able to accept only simple commands. Thats why the class works entirely
-with integer values. Also everything the robot does is encapsulated in this class which could be easily extended to send the command (via RF or cable) to
+with integer values. Also everything the robot does is encapsulated in this class which could be easily extended to send the commands (via RF or cable) to
 an actual toy robot.
 The robohandler works as command interpreter, the commands are passed via the execCommand() function. If the verbose mode is off only the REPORT command returns a string
 and all errors and warnings are ignored.The class is designed so that new commands can be imlemented easily.
 Since Phython does not have a case-switch statement i used dictionary mapping for functions which also makes the code more readable.
 To add a new command you simply need to implement a new function and add the function to the dictionary. 
 It was not requested that every command gives an answer so a verbose mode has been added to the class, so that the user can decide if he wants the answers or not
+
+
+
+## Discussion
+
+For this project the movt 
