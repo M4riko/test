@@ -41,12 +41,26 @@ all commands
 ## Testing Instructions
 
 Two unit test has been implemented to test the robot and the robotController:
-
 use:
-"pyhton simple_robot_test.py"
-"pyhton robot_controller_test.py"
+"pyhton simple_robot_test.py" and "pyhton robot_controller_test.py"
 
 
+###simple_robot_test:
+-	Test Different values for place command
+-	Test if report returns the right value
+-	Test turn functions
+-	Test movement in every direction
+-	Test that robot does not fall over one of the 4 borders
+-	Test if a second place command works
+
+####command handler test
+-	Test return string for every command whitout verbose mode : Only PLACE should give a return value
+-	Test return string for every command with verbose mode
+-	Test return string for invalid place commands
+-	Test return string for different PLACE commands
+-	Test return string for commands with placed robot
+-	Test return string for movement commands that would make the robot fall off the table
+-	2 Functionallity tests: Command sequences that should move the robot from one position to another
 
 ## Design
 
