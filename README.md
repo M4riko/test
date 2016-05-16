@@ -65,15 +65,17 @@ use:
 ## Design
 
 ```
-+--------------+    Command      +--------------------+     executes     +--------------+
-|              |    String       |                    |     command      |              |
-|              | +----------->   | RoboHandler        |  +------------>  | SimpleRobot  |
-|     main     |                 |                    |                  |              |
-|    (user)    |                 +-com. interpretation|                  | -Robot logic |
-|              |                 +-error hadling      |                  |              |
-|              | <-----------+   |                    |  <------------+  |              |
-|              |    Response     |                    |     gives        |              |
-+--------------+    String       +--------------------+     Response     +--------------+
++------------------+     Command      +----------------------+     executes     +------------------+
+|                  |     String       |                      |     command      |                  |
+|      main        |  +----------->   |  RoboHandler         |  +------------>  | SimpleRobot      |
+|                  |                  |                      |                  |                  |
+| - console I/O    |                  | -com. interpretation |                  | -Robot logic     |
+| - file I/O       |                  | -error hadling       |                  |                  |
+|                  |  <-----------+   |                      |  <------------+  |                  |
+|                  |     Response     |                      |     gives        |                  |
+|                  |     String       |                      |     Response     |                  |
++------------------+                  +----------------------+                  +------------------+
+
 ```
 
 
