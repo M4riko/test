@@ -64,7 +64,7 @@ use:
 
 ## Design
 
-
+```
 +--------------+    Command      +--------------------+     executes     +--------------+
 |              |    String       |                    |     command      |              |
 |              | +----------->   | RoboHandler        |  +------------>  | SimpleRobot  |
@@ -74,7 +74,7 @@ use:
 |              | <-----------+   |                    |  <------------+  |              |
 |              |    Response     |                    |     gives        |              |
 +--------------+    String       +--------------------+     Response     +--------------+
-
+```
 
 
 The programm is composed of three parts:
