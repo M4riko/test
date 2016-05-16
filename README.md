@@ -45,7 +45,7 @@ use:
 "pyhton simple_robot_test.py" and "pyhton robot_controller_test.py"
 
 
-###simple_robot_test:
+####simple_robot_test:
 -	Test Different values for place command
 -	Test if report returns the right value
 -	Test turn functions
@@ -63,6 +63,19 @@ use:
 -	2 Functionallity tests: Command sequences that should move the robot from one position to another
 
 ## Design
+
+
++--------------+    Command      +--------------------+     executes     +--------------+
+|              |    String       |                    |     command      |              |
+|              | +----------->   | RoboHandler        |  +------------>  | SimpleRobot  |
+|     main     |                 |                    |                  |              |
+|    (user)    |                 +-com. interpretation|                  | -Robot logic |
+|              |                 +-error hadling      |                  |              |
+|              | <-----------+   |                    |  <------------+  |              |
+|              |    Response     |                    |     gives        |              |
++--------------+    String       +--------------------+     Response     +--------------+
+
+
 
 The programm is composed of three parts:
 
