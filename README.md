@@ -69,3 +69,14 @@ The simple_robot will then try to execute the command, if an error happens the f
 is then again responsable to interpret the error and if verbose mode is chosen return an error message. The main
 program will then print the response on the console.
 
+
+## Discussion
+
+While implementing the this project i was imagining a little toy robot able to accept only simple commands. Thats why the class works entirely
+with integer values. Also everything the robot does is encapsulated in this class which could be easily extended to send the command (via RF or cable) to
+an actual toy robot.
+The robohandler works as command interpreter, the commands are passed via the execCommand() function. If the verbose mode is off only the REPORT command returns a string
+and all errors and warnings are ignored.The class is designed so that new commands can be imlemented easily.
+Since Phython does not have a case-switch statement i used dictionary mapping for functions which also makes the code more readable.
+To add a new command you simply need to implement a new function and add the function to the dictionary. 
+It was not requested that every command gives an answer so a verbose mode has been added to the class, so that the user can decide if he wants the answers or not
